@@ -1,0 +1,97 @@
+.card {
+  background-color: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast) ease, box-shadow var(--transition-fast) ease;
+}
+
+.card:hover {
+  transform: translateY(var(--card-hover-offset));
+  box-shadow: var(--shadow-md);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: var(--card-image-height);
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.content {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: var(--flex-grow-active);
+}
+
+.title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.link {
+  color: var(--color-text-main);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+.artist {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.medium {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.favBtn {
+  margin-top: auto;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: transparent;
+  color: var(--color-primary);
+  border: var(--border-width-thin) solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background-color var(--transition-fast) ease, color var(--transition-fast) ease;
+}
+
+.favBtn:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-white);
+  border-color: var(--color-primary-hover);
+}
+
+.favBtnActive {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.favBtnActive:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}

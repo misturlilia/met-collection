@@ -1,0 +1,14 @@
+.appLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: var(--full-viewport-height);
+  background-color: var(--color-bg);
+}
+
+.mainContent {
+  flex: var(--flex-grow-active);
+  max-width: var(--container-max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}

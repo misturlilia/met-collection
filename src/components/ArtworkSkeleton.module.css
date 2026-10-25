@@ -1,0 +1,54 @@
+@keyframes skeleton-loading {
+  0% {
+    background-color: var(--color-skeleton-from);
+  }
+  50% {
+    background-color: var(--color-skeleton-to);
+  }
+  100% {
+    background-color: var(--color-skeleton-from);
+  }
+}
+
+.skeletonCard {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--color-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.skeletonImage {
+  height: var(--card-image-height);
+  width: 100%;
+  animation: skeleton-loading var(--skeleton-duration) infinite ease-in-out;
+}
+
+.skeletonContent {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.skeletonLine {
+  height: var(--space-sm);
+  border-radius: var(--radius-sm);
+  animation: skeleton-loading var(--skeleton-duration) infinite ease-in-out;
+}
+
+.skeletonTitle {
+  width: 80%;
+  height: var(--space-md);
+}
+
+.skeletonText {
+  width: 60%;
+}
+
+.skeletonTextShort {
+  width: 40%;
+}
